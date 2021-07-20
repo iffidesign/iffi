@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass'); 
+const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
@@ -78,12 +78,12 @@ exports.clean = clean;
 exports.server = server;
 
 exports.develop = series(
-										clean, 
+										clean,
 										parallel(css, js),
 										watchFiles
 									);
 
 exports.deploy = series(
-										clean, 
+										clean,
 										parallel(deployCSS, deployJs, deployHTML)
 									);

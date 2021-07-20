@@ -20,12 +20,14 @@ html
 
 
   body
-    include ../partials/header
+    .page
+      //- include ../partials/header
 
-    block BODY
+      block BODY
 
-    include ../partials/footer
+      .divider
+      include ../partials/footer
 
-    include shared/js-src
+      include shared/js-src
 
-    block POST_BODY
+      block POST_BODY

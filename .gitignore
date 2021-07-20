@@ -64,8 +64,5 @@ typings/
 # Mac OSX specific files
 .DS_Store
 
-# public folder (generated when dev)
-public/
-
 # deploy / dist folder (generated during deploymeny)
 dist/

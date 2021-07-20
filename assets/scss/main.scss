@@ -1,15 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "variables";
 
-body {
-	font-family: 'Roboto', sans-serif;
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  border: 1px solid;
 }
 
-.header,
+
+// ==============================
+// Footer
+// ==============================
 .footer {
-	height: 100px; line-height: 100px;
-	text-align: center;
-	background: #eee;
-	color: #333;
-	font-weight: bold;
-	font-size: 30px;
+  background: #404040;
+  color: #fff;
+  border-bottom: 3px solid #000;
+
+  @include media-breakpoint-down(lg) {
+    padding: 50px 0 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 50px 0;
+  }
+
+  &__content {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__company-name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 35px;
+  }
+
+  &__item + &__item {
+    padding-top: 20px;
+  }
+
+  &__title {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+
+  &__description {
+    font-size: 10px;
+  }
+
+  &__brand {
+    @include media-breakpoint-down(lg) {
+      padding-top: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  &__logo {
+    padding-bottom: 50px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 60px;
+    }
+
+    img {
+      width: 80px;
+    }
+  }
+
+  &__social-media {
+    padding-bottom: 20px;
+
+    a:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  &__copy-right {
+    font-size: 10px;
+  }
+}
+
+// ==============================
+// Miscellaneous
+// ==============================
+.divider {
+  height: 6px;
+  background: linear-gradient(90deg, $red 50%, #fff 50%);
 }
