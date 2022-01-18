@@ -1023,6 +1023,35 @@
 }
 
 // ==============================
+// Album
+// ==============================
+.Album {
+  background: #000000;
+}
+
+.Album__content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 0 10px;
+}
+
+.Album__image {
+
+  & + & {
+    padding-top: 50px;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 100px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// ==============================
 // Popup
 // ==============================
 .popup {
