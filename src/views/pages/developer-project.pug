@@ -1,0 +1,48 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'developer-project';
+  - var name = 'developer-project';
+
+block BODY
+  .key-visual.key-visual--developer
+    .key-visual__title-wrapper: .key-visual__title developer<br/>project
+
+  .divider
+
+  .section.section--product: .inner-wrapper
+    .container-fluid: .row
+        .col-sm-10.offset-sm-1
+          p Working with property developers, we have been tasked to plan, design and put together the interiors of the homes they have built on large scale projects basis. Converting empty shells into cosy and habitable homes that are ready for new homeowners to move in, we have been involved with several notable projects within the Klang Valley, Seremban and Iskandar Malaysia.
+
+
+  .image-section: .inner-wrapper: .container-fluid: .row: .col-10.offset-1
+    .developer__project
+      a.project.project--first(href="../pages/developer-pj-midtown.pug")
+        .project__overlay
+        img.img-fluid(src="../../images/developer-project-1.jpg", alt="")
+        .project__info
+          .project__category Developer Project
+          .project__name PJ Midtown - Petaling Jaya
+        .divider
+      a.project.project--second(href="../pages/developer-pr1ma.pug")
+        .project__overlay
+        img.img-fluid(src="../../images/developer-project-2.jpg", alt="")
+        .project__info
+          .project__category Developer Project
+          .project__name PR1MA - Seremban
+        .divider
+      a.project.project--third(href="../pages/developer-seventeen-residences.pug")
+        .project__overlay
+        img.img-fluid(src="../../images/developer-project-3.jpg", alt="")
+        .project__info
+          .project__category Developer Project
+          .project__name Seventeen Residences - Petaling Jaya
+        .divider
+      a.project.project--fourth(href="../pages/developer-teega-suites.pug")
+        .project__overlay
+        img.img-fluid(src="../../images/developer-project-4.jpg", alt="")
+        .project__info
+          .project__category Developer Project
+          .project__name Teega Suites - Nusajaya Johor
+        .divider

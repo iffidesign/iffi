@@ -1,0 +1,23 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'contact';
+  - var name = 'contact';
+
+block BODY
+  .key-visual.key-visual--contact
+    .key-visual__title-wrapper: .key-visual__title contact us
+
+  .section.section--contact: .container-fluid: .row: .col-12
+    .contact-us
+      h1 <span class="text--red">Get</span> In Touch
+      .contact-us__contact
+        .contact-us__phone <b>TEL</b>  603 5525 3535
+        .contact-us__phone <b>FAX</b>  603 5525 5353
+      .contact-us__social
+        a(href="https://www.instagram.com/iffidesign_official" target="_blank")
+          img(src="../../images/instagram--big.png", alt="Instagram")
+        a(href="https://www.facebook.com/IFFIDesign.Malaysia" target="_blank")
+          img(src="../../images/facebook--big.png", alt="Facebook")
+  .contact-us__map: .inner-wrapper
+    iframe(width='600' height='450' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63749.370697829516!2d101.537191!3d3.0040430000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb30db890451b%3A0x5d549ce7e6556b!2sIFFI%20Design%20Sdn%20Bhd!5e0!3m2!1sen!2sus!4v1636019862251!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy")

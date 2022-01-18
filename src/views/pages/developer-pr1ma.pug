@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Developer Project PR1MA - Seremban';
+    var category = 'developer'
+    var name = 'pr1ma';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/developer-pr1ma-mobile.jpg")
+      img.img-fluid(src="../../images/developer-pr1ma.jpg", alt="")
+    .product__info
+      .product__category Developer Project
+      .product__title PR1MA - Seremban
+
+  +navigator(category, 0, 2)

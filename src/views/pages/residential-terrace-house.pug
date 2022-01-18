@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Residential Terrace House - Bandar Putri Puchong';
+    var category = 'residential'
+    var name = 'terrace-house';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/residential-terrace-house-mobile.jpg")
+      img.img-fluid(src="../../images/residential-terrace-house.jpg", alt="")
+    .product__info
+      .product__category Residential
+      .product__title Terrace House - <br class="product__break"/>Bandar Putri Puchong
+
+  +navigator(category, 0, 2)

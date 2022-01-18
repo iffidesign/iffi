@@ -1,0 +1,22 @@
+mixin navigator(category, prev, next)
+  -
+    var prevUrl = `../pages/${category}-${products[category][prev].name}.pug`
+    var nextUrl = `../pages/${category}-${products[category][next].name}.pug`
+  .navigator
+    .navigator__content
+      a.navigator__btn.navigator__btn--previous(href=prevUrl)
+        table
+          tr
+            td(rowspan="2")
+              img.navigator__arrow(src="../../images/previous.png")
+            td.navigator__description PREVIOUS PROJECT
+          tr
+            td.navigator__title= products[category][prev].title
+      a.navigator__btn.navigator__btn--next(href=nextUrl)
+        table
+          tr
+            td.navigator__description Next PROJECT
+            td(rowspan="2")
+              img.navigator__arrow(src="../../images/next.png")
+          tr
+            td.navigator__title= products[category][next].title

@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Residential';
+    var name = 'residential';
+
+block BODY
+  .key-visual.key-visual--residential
+    .key-visual__title-wrapper: .key-visual__title RESIDENTIAL
+
+  .divider
+
+  .section.section--product: .inner-wrapper: .container-fluid: .row: .col-sm-10.offset-sm-1
+    p "A house is made of walls and beams; a home is built with love and dreams." This rings true in our work, turning our clients’ dreams into reality, each home unique and special to its owner. From bedrooms to kitchens, living rooms to lounges, homes are where our bread and butter lies, and our expertise expressed.
+    p Whether it is retrofitting a timeless classic terrace house or elevating a luxury condominium to the pinnacle of style and modernity, our designs exude the aspirations of our clients for their homes.
+
+  .image-section: .inner-wrapper: .container-fluid: .row: .col-10.offset-1
+    .residential__project
+      a.project.project--first(href="../pages/residential-sening-garden.pug")
+        .project__overlay
+        picture
+          source(media="(max-width:768px)" srcset="../../images/residential-project-1-mobile.jpg")
+          img.img-fluid(src="../../images/residential-project-1.jpg", alt="")
+        .project__info
+          .project__category Residential
+          .project__name Sening Garden - Taiping
+        .divider
+      a.project.project--second(href="../pages/residential-terrace-house.pug")
+        .project__overlay
+        picture
+          source(media="(max-width:768px)" srcset="../../images/residential-project-2-mobile.jpg")
+          img.img-fluid(src="../../images/residential-project-2.jpg", alt="")
+        .project__info
+          .project__category Residential
+          .project__name Terrace House - Bandar Putri Puchong
+        .divider
+      a.project.project--third(href="../pages/residential-the-oval.pug")
+        .project__overlay
+        picture
+          source(media="(max-width:768px)" srcset="../../images/residential-project-3-mobile.jpg")
+          img.img-fluid(src="../../images/residential-project-3.jpg", alt="")
+        .project__info
+          .project__category Residential
+          .project__name The Oval - KLCC
+        .divider

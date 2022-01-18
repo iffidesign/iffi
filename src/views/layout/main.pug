@@ -1,0 +1,44 @@
+block VARIABLES
+
+include ../globals/variables
+include ../globals/mixins
+
+doctype html
+
+html
+  head
+    title #{pageTitle}
+
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(content="IE=edge,chrome=1,chrome=1", "http-equiv"="X-UA-Compatible")
+    meta(charset="utf-8")
+
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css")
+    link(rel="stylesheet", href="../../styles/main.scss")
+
+    block PRE_BODY
+
+
+  body
+    //- This is CSS to make sure the logo in the navigation is align with another logo in the hero section.
+    //- .line.line--left
+    //- .line.line--middle
+    //- .line.line--right
+    .page
+      include ../partials/header
+
+      block BODY
+
+      .divider
+      include ../partials/footer
+
+  //- script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js")
+  //- script(src="../../js/jquery.js")
+  script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js")
+  //- script(src="../../js/slick.js")
+  script(type="module", src="../../js/script.js")
+
+  block POST_BODY

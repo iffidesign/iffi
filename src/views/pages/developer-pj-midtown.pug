@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Developer Project PJ Midtown - Petaling Jaya';
+    var category = 'developer'
+    var name = 'pj-midtown';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/developer-pj-midtown-mobile.jpg")
+      img.img-fluid(src="../../images/developer-pj-midtown.jpg", alt="")
+    .product__info
+      .product__category Developer Project
+      .product__title PJ Midtown - Petaling Jaya
+
+  +navigator(category, 3, 1)

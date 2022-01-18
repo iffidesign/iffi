@@ -1,0 +1,28 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'Commercial';
+  - var name = 'commercial';
+
+block BODY
+  .key-visual.key-visual--commercial
+    .key-visual__title-wrapper: .key-visual__title COMMERCIAL
+
+  .divider
+
+  .section.section--product: .inner-wrapper
+    .container-fluid: .row
+        .col-sm-10.offset-sm-1
+          p Design flows throughout our lives within the home and beyond. Our space planning and interior design work in the commercial sphere are aimed to elate the vibe and culture of the company or brand. Whether it is for an F&B outlet or show gallery, our clients have found that proper and inspirational design for their space helps them communicate their brand message to their customers better.
+
+  .image-section: .inner-wrapper: .container-fluid: .row: .col-10.offset-1
+    .commercial__project
+      a.project.project--first(href="../pages/commercial-pj-midtown.pug")
+        .project__overlay
+        picture
+          source(media="(max-width:768px)" srcset="../../images/commercial-project-1-mobile.jpg")
+          img.img-fluid(src="../../images/commercial-project-1.jpg", alt="")
+        .project__info
+          .project__category Commercial
+          .project__name PJ Midtown Sales Gallery
+        .divider

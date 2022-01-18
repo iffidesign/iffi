@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Residential Sening Garden - Taiping';
+    var category = 'residential'
+    var name = 'sening-garden';
+
+block BODY
+  .KeyVisual__image
+    picture
+      source(media="(max-width:991px)" srcset="../../images/residential-sening-garden-mobile.jpg")
+      img.img-fluid(src="../../images/residential-sening-garden.jpg", alt="")
+    .product__info
+      .product__category Residential
+      .product__title Sening Garden - Taiping
+
+  +navigator(category, 2, 1)

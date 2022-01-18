@@ -1,0 +1,94 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'Home';
+  - var name = 'home';
+
+block BODY
+  .key-visual.key-visual--home
+    .animation-background
+    .animation-logo
+      img.animation-logo__image.animation-logo__image--i(src="../../images/red-i.png")
+      img.animation-logo__image.animation-logo__image--f(src="../../images/red-f.png")
+      img.animation-logo__image.animation-logo__image--f(src="../../images/white-f.png")
+      img.animation-logo__image.animation-logo__image--i(src="../../images/white-i.png")
+
+  .divider
+
+  .section.index: .inner-wrapper
+    .container-fluid
+      .row
+        .col-sm-10.offset-sm-1.col-lg-4.offset-lg-1
+          .index__title Innovating Your Interiors,<br/>Designing Your Dreams
+        .col-sm-10.offset-sm-1.col-lg-5
+          p At IFFI Design, we believe in enriching people’s lives by creating spaces inspired by their own aspirations and experiences. We want to understand the needs, wishes and desires of each client in order to impact-fully use architecture and design to address each aspiration.
+          p Bringing together avant-garde and classic elements, our creations breathe both form and function that is innovative yet marked with a timeless charm. Through our work we strive to share our passion with our clients.
+
+  .experience
+    .experience__content-desktop
+      .experience__block
+        .experience__title <span class="emphasize">7</span> years
+        .experience__description since IFFI Design was incorporated in 2012
+      .experience__block
+        .experience__title <span class="emphasize">50</span> years
+        .experience__description of combined experience in the Interior Design industry.
+      .experience__block
+        .experience__title <span class="emphasize">33</span> projects
+        .experience__description successful completed and delivered
+
+    .experience__content-mobile
+      #experience__carousel.experience__carousel.carousel.slide(data-bs-ride='carousel')
+        .carousel-indicators
+          button.active(type='button' data-bs-target='#experience__carousel' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+          button(type='button' data-bs-target='#experience__carousel' data-bs-slide-to='1' aria-label='Slide 2')
+          button(type='button' data-bs-target='#experience__carousel' data-bs-slide-to='2' aria-label='Slide 3')
+        .carousel-inner
+          .carousel-item.active
+            .experience__title <span class="emphasize">7</span> years
+            .experience__description since IFFI Design was incorporated in 2012
+          .carousel-item
+            .experience__title <span class="emphasize">50</span> years
+            .experience__description of combined experience in the Interior Design industry.
+          .carousel-item
+            .experience__title <span class="emphasize">33</span> projects
+            .experience__description successful completed and delivered
+        button.carousel-control-prev(type='button' data-bs-target='#experience__carousel' data-bs-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.visually-hidden Previous
+        button.carousel-control-next(type='button' data-bs-target='#experience__carousel' data-bs-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.visually-hidden Next
+
+  .section--highlight.highlight: .inner-wrapper
+    .container-fluid: .row: .col-10.offset-1
+      .highlight__project
+        //- .project.project--first(data-toggle="modal" data-bs-target="#broganiaResidenceModal")
+        .project.project--first(data-toggle="popup", data-target="#broganiaResidencePopup")
+          .project__overlay
+          picture
+            source(media="(max-width:991px)" srcset="../../images/index-big-mobile.jpg")
+            img.img-fluid(src="../../images/index-big.jpg", alt="")
+          .highlight__info
+            .highlight__category Residential
+            .highlight__name Brogania Residence - Semenyih
+          .divider
+        .project.project--second(data-toggle="popup" data-target="#minesResortCityPopup")
+          .project__overlay
+          picture
+            source(media="(max-width:991px)" srcset="../../images/index-small-1-mobile.jpg")
+            img.img-fluid(src="../../images/index-small-1.jpg", alt="")
+          .highlight__info
+            .highlight__category Residential
+            .highlight__name Mines Resort City - Bungalow
+          .divider
+        .project.project--third(data-toggle="popup" data-target="#sempurnaDamaiPopup")
+          .project__overlay
+          picture
+            source(media="(max-width:991px)" srcset="../../images/index-small-2-mobile.jpg")
+            img.img-fluid(src="../../images/index-small-2.jpg", alt="")
+          .highlight__info
+            .highlight__category Residential
+            .highlight__name Sempurna Damai - Semenyih
+          .divider
+
+  include ../partials/carousel

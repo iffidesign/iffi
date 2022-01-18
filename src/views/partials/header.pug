@@ -1,0 +1,34 @@
+header
+  nav.navigation.navigation--animation
+  nav.navigation(class=(name === 'home' ? 'navigation--animation' : undefined))
+    .navigation__content-desktop
+      .navigation__item
+        a.navigation__link(href="../pages/residential.pug", class=(name === 'residential' ? 'active' : undefined)) Residential
+      .navigation__item
+        a.navigation__link(href="../pages/commercial.pug", class=(name === 'commercial' ? 'active' : undefined)) Commercial
+      .navigation__item
+        a.navigation__link(href="../pages/developer-project.pug", class=(name === 'developer-project' ? 'active' : undefined)) Developer<br/>Project
+      .navigation__item
+        .navigation__logo.navigation__logo--desktop
+          img(src="../../images/logo.jpg", alt="IFFI Logo")
+      .navigation__item
+        a.navigation__link(href="../pages/index.pug", class=(name === 'home' ? 'active' : undefined)) Home
+      .navigation__item
+        a.navigation__link(href="../pages/about-us.pug", class=(name === 'about' ? 'active' : undefined)) About Us
+      .navigation__item
+        a.navigation__link(href="../pages/contact-us.pug", class=(name === 'contact' ? 'active' : undefined)) Contact Us
+    .navigation__content-mobile
+      .navigation__logo
+        img(src="../../images/logo.jpg", alt="IFFI Logo")
+      .navigation__burger.js--open-menu
+        img(src="../../images/menu.png", alt="Burger Menu")
+    .navigation__menu.d-lg-none
+      a.navigation__menu-item(href="../pages/index.pug" class=(name === 'home' ? 'active' : undefined)) Home
+      a.navigation__menu-item(href="../pages/about-us.pug" class=(name === 'about' ? 'active' : undefined)) About Us
+      a.navigation__menu-item(href="../pages/residential.pug" class=(name === 'residential' ? 'active' : undefined)) Residential
+      a.navigation__menu-item(href="../pages/commercial.pug" class=(name === 'commercial' ? 'active' : undefined)) Commercial
+      a.navigation__menu-item(href="../pages/developer-project.pug" class=(name === 'developer-project' ? 'active' : undefined)) Developer Project
+      a.navigation__menu-item(href="../pages/contact-us.pug" class=(name === 'contact' ? 'active' : undefined)) Contact Us
+
+      .navigation__menu-close.js--close-menu
+        img(src="../../images/cross.png", alt="Close")

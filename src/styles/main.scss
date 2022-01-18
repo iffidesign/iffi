@@ -1,0 +1,1117 @@
+// $slick-font-path: "../../node_modules/slick-carousel/slick/fonts";
+// $slick-loader-path: "../../node_modules/slick-carousel/slick";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../node_modules/slick-carousel/slick/slick";
+// @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "variables";
+
+.page {
+  font-family: Helvetica;
+  line-height: 1.4;
+}
+
+.inner-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+// ==============================
+// Navigation
+// ==============================
+.navigation {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: auto;
+  // max-width: 1440px;
+  padding-top: 40px;
+  background: linear-gradient(rgb(0, 0, 0), rgba(255,255,255,0));
+
+  &--animation {
+    opacity: 0;
+    animation: navigationFadeIn 3s forwards 2s;
+  }
+
+  &__content-desktop {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    height: 110px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 14.4vw;
+      max-width: 110px;
+    }
+  }
+
+  &__logo--desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__burger {
+    cursor: pointer;
+    img {
+      width: 8vw;
+      max-width: 60px;
+    }
+  }
+
+  &__item {
+    width: 157px;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #fff;
+    line-height: 1.4;
+    padding: 0 10px;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255, 0);
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.active {
+      font-weight: bold;
+      border-bottom: 2px solid $red;
+    }
+  }
+
+  &__content-mobile {
+    padding: 0 9.8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    background: rgba(0,0,0,0.8);
+    padding: 5vw 4vw;
+    text-align: center;
+    overflow: scroll;
+    max-width: 1440px;
+    transition: 1s;
+    display: none;
+
+    &.active {
+      opacity: 1;
+      display: block;
+    }
+  }
+
+  &__menu-item {
+    font-size: 3.5vw;
+    color: #fff;
+    text-decoration: none;
+    padding: 30px 0;
+    display: block;
+    border-bottom: 1px solid #707070;
+
+    @include media-breakpoint-up(md) {
+      font-size: 30px
+    }
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.active {
+      border-bottom: 1px solid $red;
+      font-weight: bold;
+    }
+  }
+
+  &__menu-close {
+    cursor: pointer;
+    width: 5.3vw;
+    max-width: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20vh 0 10vh;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ==============================
+// Footer
+// ==============================
+.footer {
+  background: #404040;
+  color: #fff;
+  border-bottom: 3px solid #000;
+
+  @include media-breakpoint-down(lg) {
+    padding: 50px 0 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 50px 0;
+  }
+
+  &__content {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__company-name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 35px;
+  }
+
+  &__item + &__item {
+    padding-top: 20px;
+  }
+
+  &__title {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+
+  &__description {
+    font-size: 10px;
+  }
+
+  &__brand {
+    @include media-breakpoint-down(lg) {
+      padding-top: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  &__logo {
+    padding-bottom: 50px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 60px;
+    }
+
+    img {
+      width: 10.5vw;
+      max-width: 80px;
+    }
+  }
+
+  &__social-media {
+    padding-bottom: 20px;
+
+    a:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  &__copy-right {
+    font-size: 10px;
+  }
+}
+
+// ==============================
+// Key Visual
+// ==============================
+.key-visual {
+  position: relative;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    height: 750px;
+  }
+
+
+  &__title-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    display: block;
+    text-align: right;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 5vw;
+    margin-right: -5vw;
+
+    @include media-breakpoint-up(md) {
+      font-size: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 42px;
+      letter-spacing: 85px;
+      margin-right: -85px;
+    }
+  }
+}
+
+.key-visual--home {
+  background-image: url('../images/home_kv.jpg');
+}
+
+.key-visual--residential {
+  background-image: url('../images/residential_kv.jpg');
+}
+
+.key-visual--commercial {
+  background-image: url('../images/commercial_kv.jpg');
+}
+
+.key-visual--developer {
+  background-image: url('../images/developer-project_kv.jpg');
+}
+
+.key-visual--contact {
+  background-image: url('../images/contact_us.jpg');
+}
+
+.key-visual--about {
+  background-image: url('../images/about_us_kv.jpg');
+}
+
+.KeyVisual__image {
+  position: relative;
+}
+
+// ==============================
+// Animation
+// ==============================
+.animation-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  animation: backgroundFadeOut 5s forwards;
+}
+
+.animation-logo {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__image {
+    margin: 0 2px;
+    animation: logoSplit 3s forwards 3s;
+
+    &--i {
+      width: 10px;
+    }
+
+    &--f {
+      width: 30px;
+    }
+  }
+}
+
+@keyframes backgroundFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes navigationFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logoSplit {
+  0% {
+    margin: 0 2px;
+  }
+  50%{
+    margin: 0 80px;
+  }
+  80% {
+    margin: 0 80px;
+    opacity: 1;
+  }
+  100% {
+    margin: 0 80px;
+    opacity: 0;
+  }
+}
+
+// ==============================
+// Section
+// ==============================
+.section {
+  color: #fff;
+  background: linear-gradient(#262626,#000);
+
+  &--product {
+    padding: 70px 0px;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 100;
+
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+  }
+}
+
+.image-section {
+  background: #000;
+  padding-bottom: 100px;
+
+  &__content {
+    display: grid;
+  }
+}
+
+// ==============================
+// Index
+// ==============================
+.index {
+  padding: 9.1vw 0 12vw;
+
+  @include media-breakpoint-up(lg) {
+    padding: 70px 0 160px;
+  }
+
+  &__title {
+    font-size: 3.9vw;
+    padding-bottom: 8.5vw;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 32px;
+      padding-bottom: 65px;
+    }
+  }
+}
+
+.experience {
+  background-image: url('../images//experience.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 63.5vw;
+  color: #fff;
+
+  @include media-breakpoint-up(lg) {
+    height: 488px;
+  }
+
+  &__content-desktop {
+    display: flex;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 160px 0 140px;
+
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  &__content-mobile {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__block {
+    text-align: center;
+    flex: 1 1 0px;
+    padding: 30px 0;
+
+    & + & {
+      border-left: 1px solid #fff;
+    }
+  }
+
+  &__emphasize {
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: lighter;
+    padding-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 18px;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  &__carousel {
+    height: 63.5vw;
+
+    .carousel-inner {
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+  }
+}
+
+.section--highlight {
+  background: #000000;
+  padding: 12vw 0 13vw;
+
+  @include media-breakpoint-up(lg) {
+    padding: 170px 0 190px;
+  }
+}
+
+.highlight {
+  &__project {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-template-areas:
+        'first second'
+        'first third';
+      grid-gap: 10px;
+    }
+  }
+  .project--first {
+    grid-area: first;
+  }
+
+  .project--second {
+    grid-area: second;
+  }
+
+  .project--third {
+    grid-area: third;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+  }
+
+  &__category {
+    font-size: 2.5vw;
+
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 3vw;
+    font-weight: bold;
+
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+    }
+  }
+}
+
+// ==============================
+// About Us
+// ==============================
+.about-us {
+  padding: 80px 0 90px;
+  background: linear-gradient(#262626,#000);
+
+  @include media-breakpoint-up(lg) {
+    padding: 70px 0;
+  }
+}
+
+.service {
+  padding-bottom: 145px;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 65px;
+  }
+
+  &--last {
+    padding-bottom: 100px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 0px;
+    }
+  }
+
+  &__image {
+    transform: translateY(-15%);
+
+    @include media-breakpoint-up(sm) {
+      transform: translateY(-10%);
+    }
+
+    @include media-breakpoint-up(lg) {
+      transform: translateY(-15%);
+      transform: translateY(-100px);
+    }
+  }
+
+
+  &__content {
+    @include media-breakpoint-up(lg) {
+      transform: translateY(30%);
+    }
+
+    @include media-breakpoint-up(xl) {
+      transform: translateY(70%);
+    }
+
+    &--left {
+      @include media-breakpoint-down(lg) {
+        padding-right: 10.5vw;
+      }
+    }
+
+    &--right {
+      @include media-breakpoint-down(lg) {
+        padding-left: 10.5vw;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    max-width: 530px;
+    padding-bottom: 20px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 530px;
+      width: 100%;
+    }
+
+    &--left {
+      padding-left: 15px;
+    }
+
+    &--right {
+      padding-right: 15px;
+    }
+  }
+
+  &__item-wrapper {
+    display: flex;
+
+    &--left {
+      justify-content: flex-end;
+    }
+  }
+
+  &__description {
+    text-align: justify;
+    font-size: 14px;
+    width: 100%;
+    max-width: 530px;
+    padding-top: 40px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+
+    &--left {
+      padding-left: 15px;
+    }
+
+    &--right {
+      padding-right: 15px;
+    }
+  }
+}
+
+.section-title {
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  background: #000;
+  padding-bottom: 150px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 54px;
+  }
+}
+
+// ==============================
+// Residential
+// ==============================
+.residential__project {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-areas:
+      'first second'
+      'third third';
+    grid-gap: 10px;
+  }
+
+  .project--first {
+    grid-area: first;
+  }
+
+  .project--second {
+    grid-area: second;
+  }
+
+  .project--third {
+    grid-area: third;
+  }
+}
+
+// ==============================
+// Developer Project
+// ==============================
+.developer__project {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-areas:
+      'first second'
+      'third fourth';
+    grid-gap: 10px;
+  }
+
+  .project--first {
+    grid-area: first;
+  }
+
+  .project--second {
+    grid-area: second;
+  }
+
+  .project--third {
+    grid-area: third;
+  }
+
+  .project--fourth {
+    grid-area: fourth;
+  }
+}
+
+// ==============================
+// Contact Us
+// ==============================
+.section--contact {
+  padding: 100px 0 70px;
+
+  @include media-breakpoint-up(sm) {
+    padding: 135px 0 70px;
+  }
+}
+
+.contact-us {
+  text-align: center;
+
+  h1 {
+    font-size: 56px;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 70px;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__contact {
+    font-size: 20px;
+    padding-bottom: 40px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 28px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  }
+
+  &__phone {
+    & + & {
+      @include media-breakpoint-down(md) {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 120px;
+    margin: 0 auto;
+  }
+}
+
+.contact-us__map {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+
+  iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+}
+
+// ==============================
+// Product
+// ==============================
+
+.product {
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+
+  &__category {
+    font-size: 18px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 26px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+
+    @include media-breakpoint-up(md) {
+      font-size: 42px;
+    }
+  }
+
+  &__break {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+}
+
+.navigator {
+  color: #fff;
+  background: #000;
+  padding: 45px 15px;
+
+  @include media-breakpoint-up(sm) {
+    padding: 70px 15px;
+  }
+
+  &__content {
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    @include media-breakpoint-up(sm) {
+      font-size: 20px;
+    }
+  }
+}
+
+.navigator__btn {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    & + & {
+      padding-top: 40px;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  &--previous {
+    text-align: left;
+    .navigator__arrow {
+      padding-right: 10px;
+      @include media-breakpoint-up(sm) {
+        padding-right: 50px;
+      }
+    }
+  }
+
+  &--next {
+    text-align: right;
+    .navigator__arrow {
+      padding-left: 10px;
+      @include media-breakpoint-up(sm) {
+        padding-left: 50px;
+      }
+    }
+  }
+}
+
+// ==============================
+// Miscellaneous
+// ==============================
+.divider {
+  height: 3px;
+  background: linear-gradient(90deg, $red 50%, #fff 50%);
+
+  &--reverse {
+    height: 3px;
+    background: linear-gradient(270deg, $red 50%, #fff 50%);
+  }
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.text--red {
+  color: $red;
+}
+
+.container-p-0 {
+  @include make-container(0);
+}
+
+.project {
+  display: block;
+  position: relative;
+  color: #fff;
+
+  & + & {
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+
+    .project__overlay {
+      background: rgba(0,0,0,0);
+    }
+
+    .divider {
+      width: 100%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    transition: 1s;
+  }
+
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__category {
+    font-size: 18px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+    }
+  }
+
+  .divider {
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    transition: 1s;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// ==============================
+// Popup
+// ==============================
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background: rgba(0,0,0,0.5);
+
+  &.show {
+    display: block;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 0;
+}
+
+.slick-slide {
+  margin: 0 15px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 60px;
+  }
+}
+
+.slick__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &.slick--prev {
+    @include media-breakpoint-up(md) { left: 9vw; }
+    @include media-breakpoint-up(lg) { left: 7vw; }
+    @include media-breakpoint-up(xl) { left: 5vw; }
+  }
+
+  &.slick--next {
+    @include media-breakpoint-up(md) { right: 9vw; }
+    @include media-breakpoint-up(lg) { right: 7vw; }
+    @include media-breakpoint-up(xl) { right: 5vw; }
+  }
+}
+
+body {
+  &.show-popup {
+    overflow: hidden;
+  }
+}
+
+.popup__content {
+  position: relative;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+
+// .modal-dialog--full {
+//   max-width: 100%;
+//   margin: 0;
+//   height: 100%;
+// }
+
+// This is CSS to make sure the logo in the navigation is align with another logo in the hero section.
+// .line {
+//   position: absolute;
+//   height: 100%;
+//   width: 1px;
+//   background: red;
+//   z-index: 100;
+// }
+
+// .line--left {
+//   left: 670px;
+// }
+
+// .line--middle {
+//   left: 719px;
+// }
+
+// .line--right {
+//   left: 769px;
+// }

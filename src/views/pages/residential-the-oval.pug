@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Residential The Oval - KLCC';
+    var category = 'residential'
+    var name = 'the-oval';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/residential-the-oval-mobile.jpg")
+      img.img-fluid(src="../../images/residential-the-oval.jpg", alt="")
+    .product__info
+      .product__category Residential
+      .product__title The Oval - KLCC
+
+  +navigator(category, 1, 0)

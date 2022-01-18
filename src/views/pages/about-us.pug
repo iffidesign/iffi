@@ -1,0 +1,66 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'About Us';
+  - var name = 'about';
+
+block BODY
+  .key-visual.key-visual--about
+    .key-visual__title-wrapper: .key-visual__title ABOUT US
+
+  .section.about-us: .inner-wrapper
+    .container-fluid
+      .row
+        .col-sm-10.offset-sm-1.col-xl-8.offset-xl-3
+          p Incorporated in 2012, <b><span class="text--red">IF</span>FI Design</b> is a boutique interior design firm that has successfully delivered numerous projects, in both residential and commercial arenas. You can be certain of the best service and industry know-how as our team’s expertise spans over 5 decades of experience in the Interior Design industry. Additionally, we are associated with GARDE, a global Interior Design company headquartered in Tokyo.
+          p <b><span class="text--red">IF</span>FI Design</b> offers a one-stop solution, providing both design and build services. While our speciality lies in our kitchen cabinet and wardrobe systems, we also pride ourselves in our professional services where we take you through the entire design process – from developing the initial concepts to site execution – while ensuring that your investment becomes your greatest source of pride and comfort.
+
+  .section-title <span class="text--red">Our</span> Service
+
+  .section.service: .inner-wrapper: .container-p-0: .row.g-0
+    .col-10.offset-1.col-lg-5.offset-lg-0
+      .service__image
+        img.img-fluid(src="../../images/service-1.jpg", alt="")
+    .col-lg-6.offset-lg-1
+      .service__content.service__content--right
+        .service__item-wrapper.service__item-wrapper--right
+          .service__title.service__title--right Residential Interior Design &amp; Renovation
+        .divider
+        .service__item-wrapper.service__item-wrapper--right
+          .service__description.service__description--right Whether it is building from the ground up or enhancing an existing living space, our approach to residential designs is very much tailored to each client’s tastes and desires. We help you align your ideas and budget to what is practically possible, plan out a work schedule and finally, deliver a finished product of quality craftsmanship and alluring aesthetics.
+
+  .section.service: .inner-wrapper: .container-p-0: .row.g-0
+    .col-10.offset-1.col-lg-5.order-lg-2
+      .service__image
+        img.img-fluid(src="../../images/service-2.jpg", alt="")
+    .col-lg-6.order-lg-1
+      .service__content.service__content--left
+        .service__item-wrapper.service__item-wrapper--left
+          .service__title.service__title--left Specialist in Kitchen &amp; Wardrobe Systems
+        .divider--reverse
+        .service__item-wrapper.service__item-wrapper--left
+          .service__description.service__description--left When it comes to turning kitchens or bedrooms into functional spaces, look no further than IFFI Design. Our vast experience in innovative kitchen and wardrobe systems promises top-notch quality materials coupled with smart designs for your storage spaces. Efficient yet elegant, we help you best plan your kitchen and wardrobe spaces without compromising your desired designs.
+
+  .section.service: .inner-wrapper: .container-p-0: .row.g-0
+    .col-10.offset-1.col-lg-5.offset-lg-0
+      .service__image
+        img.img-fluid(src="../../images/service-3.jpg", alt="")
+    .col-lg-6.offset-lg-1
+      .service__content.service__content--right
+        .service__item-wrapper.service__item-wrapper--right
+          .service__title.service__title--right Commercial Retail Design &amp; Renovation
+        .divider
+        .service__item-wrapper.service__item-wrapper--right
+          .service__description.service__description--right The ambience of a commercial space should reflect the brand’s identity, be it a restaurant, hotel, show gallery, retail space or even an event hall. With attention to details and understanding of our clients’ branding, we ensure that business owners can continue take care of what’s important and leave the complex planning and design process to us.
+
+  .section.service.service--last: .inner-wrapper: .container-p-0: .row.g-0
+    .col-10.offset-1.col-lg-5.order-lg-2
+      .service__image
+        img.img-fluid(src="../../images/service-4.jpg", alt="")
+    .col-lg-6.order-lg-1
+      .service__content.service__content--left
+        .service__item-wrapper.service__item-wrapper--left
+          .service__title.service__title--left Design Concept Consultation
+        .divider--reverse
+        .service__item-wrapper.service__item-wrapper--left
+          .service__description.service__description--left You’ve got an idea, but don’t know how to develop it further. Talk to us and we will help you further develop that seed of an idea into a full fledge design concept. With a hands-on approach while listening to each of your requirements, we will take you through a structured consultation process to get you one step closer to your vision. Inspire us with your ideas and we’ll design your dream.

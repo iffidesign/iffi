@@ -1,0 +1,14 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'Commercial PJ Midtown Sales Gallery';
+  - var name = 'pj-midtown';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/commercial-pj-midtown-mobile.jpg")
+      img.img-fluid(src="../../images/commercial-pj-midtown.jpg", alt="")
+    .product__info
+      .product__category Commercial
+      .product__title PJ Midtown Sales Gallery
