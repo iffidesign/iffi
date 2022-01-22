@@ -1,5 +1,5 @@
 window.$ = require('jquery');
-// import 'slick-carousel/slick/slick';
+import 'slick-carousel/slick/slick';
 
 {
   $('.js--open-menu').on('click', function(){
@@ -21,8 +21,10 @@ window.$ = require('jquery');
       centerPadding: '90px',
       slidesToShow: 1,
       arrows: true,
-      prevArrow: '<span class="carousel-control-prev-icon slick__button slick--prev" aria-hidden="true"></span>',
-      nextArrow: '<span class="carousel-control-next-icon slick__button slick--next" aria-hidden="true"></span>',
+      prevArrow: `<span class="slick__button slick--prev"><img src=${require("../images/red-arrow-left.png")}/></span>`,
+      nextArrow: `<span class="slick__button slick--next"><img src=${require("../images/red-arrow-right.png")}/></span>`,
+      // prevArrow: '<span class="carousel-control-prev-icon slick__button slick--prev" aria-hidden="true"></span>',
+      // nextArrow: '<span class="carousel-control-next-icon slick__button slick--next" aria-hidden="true"></span>',
       responsive: [
         {
           breakpoint: 768,

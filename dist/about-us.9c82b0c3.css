@@ -10366,15 +10366,24 @@ textarea.form-control-lg {
     margin: 0 2px;
   }
   50% {
-    margin: 0 80px;
+    margin: 0 8vw;
+    @media (min-width: 768px) {
+      margin: 0 80px;
+    }
   }
   80% {
-    margin: 0 80px;
+    margin: 0 8vw;
     opacity: 1;
+    @media (min-width: 768px) {
+      margin: 0 80px;
+    }
   }
   100% {
-    margin: 0 80px;
+    margin: 0 8vw;
     opacity: 0;
+    @media (min-width: 768px) {
+      margin: 0 80px;
+    }
   }
 }
 .section {
@@ -10936,7 +10945,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 768px) {
   .Album__image + .Album__image {
-    padding-top: 100px;
+    padding-top: 70px;
   }
 }
 .Album__image img {
@@ -10960,10 +10969,11 @@ textarea.form-control-lg {
   display: block;
 }
 .popup__close {
+  cursor: pointer;
   position: absolute;
   top: 10%;
   right: 5%;
-  z-index: 0;
+  z-index: 999;
 }
 .slick-slide {
   margin: 0 15px;
@@ -10978,6 +10988,7 @@ textarea.form-control-lg {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 999;
 }
 @media (min-width: 768px) {
   .slick__button.slick--prev {
