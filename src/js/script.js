@@ -1,7 +1,7 @@
 window.$ = require('jquery');
 import 'slick-carousel/slick/slick';
-import arrowLeft from '../images/red-arrow-left.png';
-import arrowRight from '../images/red-arrow-right.png';
+const arrowLeft = $('.red-arrow-left').attr('src');
+const arrowRight = $('.red-arrow-right').attr('src');
 
 {
   $('.js--open-menu').on('click', function(){
@@ -23,10 +23,8 @@ import arrowRight from '../images/red-arrow-right.png';
       centerPadding: '90px',
       slidesToShow: 1,
       arrows: true,
-      prevArrow: `<span class="slick__button slick--prev"><img src=${arrowLeft}/></span>`,
-      nextArrow: `<span class="slick__button slick--next"><img src=${arrowRight}/></span>`,
-      // prevArrow: '<span class="carousel-control-prev-icon slick__button slick--prev" aria-hidden="true"></span>',
-      // nextArrow: '<span class="carousel-control-next-icon slick__button slick--next" aria-hidden="true"></span>',
+      prevArrow: `<span class="slick__button slick--prev"><img src=${arrowLeft}></span>`,
+      nextArrow: `<span class="slick__button slick--next"><img src=${arrowRight}></span>`,
       responsive: [
         {
           breakpoint: 768,

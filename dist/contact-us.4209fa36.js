@@ -519,13 +519,10 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"9wlDd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _slick = require("slick-carousel/slick/slick");
-var _redArrowLeftPng = require("../images/red-arrow-left.png");
-var _redArrowLeftPngDefault = parcelHelpers.interopDefault(_redArrowLeftPng);
-var _redArrowRightPng = require("../images/red-arrow-right.png");
-var _redArrowRightPngDefault = parcelHelpers.interopDefault(_redArrowRightPng);
 window.$ = require('jquery');
+const arrowLeft = $('.red-arrow-left').attr('src');
+const arrowRight = $('.red-arrow-right').attr('src');
 {
     $('.js--open-menu').on('click', function() {
         $('.navigation__menu').addClass('active');
@@ -544,10 +541,8 @@ window.$ = require('jquery');
             centerPadding: '90px',
             slidesToShow: 1,
             arrows: true,
-            prevArrow: `<span class="slick__button slick--prev"><img src=${_redArrowLeftPngDefault.default}/></span>`,
-            nextArrow: `<span class="slick__button slick--next"><img src=${_redArrowRightPngDefault.default}/></span>`,
-            // prevArrow: '<span class="carousel-control-prev-icon slick__button slick--prev" aria-hidden="true"></span>',
-            // nextArrow: '<span class="carousel-control-next-icon slick__button slick--next" aria-hidden="true"></span>',
+            prevArrow: `<span class="slick__button slick--prev"><img src=${arrowLeft}></span>`,
+            nextArrow: `<span class="slick__button slick--next"><img src=${arrowRight}></span>`,
             responsive: [
                 {
                     breakpoint: 768,
@@ -571,7 +566,7 @@ window.$ = require('jquery');
         $popup.find('.js--slick-slider').slick('unslick');
     });
 }
-},{"slick-carousel/slick/slick":"eh4Px","jquery":"9o0Tu","../images/red-arrow-left.png":"2ujLI","../images/red-arrow-right.png":"le3tH","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"eh4Px":[function(require,module,exports) {
+},{"slick-carousel/slick/slick":"eh4Px","jquery":"9o0Tu"}],"eh4Px":[function(require,module,exports) {
 (function(factory) {
     if (typeof define === 'function' && define.amd) define([
         'jquery'
@@ -9070,77 +9065,6 @@ window.$ = require('jquery');
     if (typeof noGlobal === "undefined") window1.jQuery = window1.$ = jQuery;
     return jQuery;
 });
-
-},{}],"2ujLI":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3Qk2X') + "red-arrow-left.36cf389d.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"hPpBg"}],"hPpBg":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
-};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"le3tH":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3Qk2X') + "red-arrow-right.26fb7e9f.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"hPpBg"}],"j7FRh":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
 
 },{}]},["9VM3C","9wlDd"], "9wlDd", "parcelRequire3648")
 
