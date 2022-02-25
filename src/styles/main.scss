@@ -924,7 +924,7 @@
     .navigator__arrow {
       padding-right: 10px;
       @include media-breakpoint-up(sm) {
-        padding-right: 50px;
+        padding-right: 20px;
       }
     }
   }
@@ -934,7 +934,7 @@
     .navigator__arrow {
       padding-left: 10px;
       @include media-breakpoint-up(sm) {
-        padding-left: 50px;
+        padding-left: 20px;
       }
     }
   }

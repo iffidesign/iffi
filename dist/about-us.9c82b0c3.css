@@ -10836,7 +10836,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 576px) {
   .navigator__btn--previous .navigator__arrow {
-    padding-right: 50px;
+    padding-right: 20px;
   }
 }
 .navigator__btn--next {
@@ -10847,7 +10847,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 576px) {
   .navigator__btn--next .navigator__arrow {
-    padding-left: 50px;
+    padding-left: 20px;
   }
 }
 .divider {
