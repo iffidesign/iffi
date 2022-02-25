@@ -519,7 +519,12 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"9wlDd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _slick = require("slick-carousel/slick/slick");
+var _redArrowLeftPng = require("../images/red-arrow-left.png");
+var _redArrowLeftPngDefault = parcelHelpers.interopDefault(_redArrowLeftPng);
+var _redArrowRightPng = require("../images/red-arrow-right.png");
+var _redArrowRightPngDefault = parcelHelpers.interopDefault(_redArrowRightPng);
 window.$ = require('jquery');
 {
     $('.js--open-menu').on('click', function() {
@@ -539,8 +544,8 @@ window.$ = require('jquery');
             centerPadding: '90px',
             slidesToShow: 1,
             arrows: true,
-            prevArrow: `<span class="slick__button slick--prev"><img src=${require("../images/red-arrow-left.png")}/></span>`,
-            nextArrow: `<span class="slick__button slick--next"><img src=${require("../images/red-arrow-right.png")}/></span>`,
+            prevArrow: `<span class="slick__button slick--prev"><img src=${_redArrowLeftPngDefault.default}/></span>`,
+            nextArrow: `<span class="slick__button slick--next"><img src=${_redArrowRightPngDefault.default}/></span>`,
             // prevArrow: '<span class="carousel-control-prev-icon slick__button slick--prev" aria-hidden="true"></span>',
             // nextArrow: '<span class="carousel-control-next-icon slick__button slick--next" aria-hidden="true"></span>',
             responsive: [
@@ -566,7 +571,7 @@ window.$ = require('jquery');
         $popup.find('.js--slick-slider').slick('unslick');
     });
 }
-},{"slick-carousel/slick/slick":"eh4Px","jquery":"9o0Tu","../images/red-arrow-left.png":"2ujLI","../images/red-arrow-right.png":"le3tH"}],"eh4Px":[function(require,module,exports) {
+},{"slick-carousel/slick/slick":"eh4Px","jquery":"9o0Tu","../images/red-arrow-left.png":"2ujLI","../images/red-arrow-right.png":"le3tH","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"eh4Px":[function(require,module,exports) {
 (function(factory) {
     if (typeof define === 'function' && define.amd) define([
         'jquery'
@@ -9107,5 +9112,35 @@ exports.getOrigin = getOrigin;
 },{}],"le3tH":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('3Qk2X') + "red-arrow-right.26fb7e9f.png" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"hPpBg"}]},["9VM3C","9wlDd"], "9wlDd", "parcelRequire3648")
+},{"./helpers/bundle-url":"hPpBg"}],"j7FRh":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["9VM3C","9wlDd"], "9wlDd", "parcelRequire3648")
 

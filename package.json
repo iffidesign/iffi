@@ -8,9 +8,9 @@
     "build": "parcel build src/views/pages/*.pug --no-cache --no-source-maps --no-content-hash --public-url ./ --dist-dir docs"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.1.0",
-    "@parcel/transformer-sass": "^2.1.0",
-    "parcel": "^2.1.0"
+    "@parcel/transformer-pug": "^2.3.2",
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "^2.3.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
