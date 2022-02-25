@@ -10784,11 +10784,11 @@ textarea.form-control-lg {
 .navigator {
   color: #fff;
   background: #000;
-  padding: 45px 15px;
+  padding: 0px 15px 45px;
 }
 @media (min-width: 576px) {
   .navigator {
-    padding: 70px 15px;
+    padding: 0px 15px 70px;
   }
 }
 @media (min-width: 576px) {
@@ -10946,6 +10946,14 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .Album__image + .Album__image {
     padding-top: 70px;
+  }
+}
+.Album__image:last-child {
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .Album__image:last-child {
+    padding-bottom: 50px;
   }
 }
 .Album__image img {
