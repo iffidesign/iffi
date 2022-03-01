@@ -250,15 +250,6 @@
 // ==============================
 .key-visual {
   position: relative;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  @include media-breakpoint-up(lg) {
-    height: 750px;
-  }
-
 
   &__title-wrapper {
     position: absolute;
@@ -287,6 +278,17 @@
       letter-spacing: 85px;
       margin-right: -85px;
     }
+  }
+}
+
+.key-visual--background {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    height: 750px;
   }
 }
 
@@ -1044,16 +1046,16 @@
 .Album__content {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 80px 0 10px;
+  padding: 45px 0 10px;
 }
 
 .Album__image {
 
   & + & {
-    padding-top: 50px;
+    padding-top: 30px;
 
     @include media-breakpoint-up(md) {
-      padding-top: 70px;
+      padding-top: 45px;
     }
   }
 
