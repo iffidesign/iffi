@@ -10658,7 +10658,7 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .residential__project {
     display: grid;
-    grid-template-areas: "first second" "third third";
+    grid-template-areas: "first second" "third fourth";
     grid-gap: 10px;
   }
 }
@@ -10670,6 +10670,28 @@ textarea.form-control-lg {
 }
 .residential__project .project--third {
   grid-area: third;
+}
+.residential__project .project--fourth {
+  grid-area: fourth;
+}
+@media (min-width: 768px) {
+  .commercial__project {
+    display: grid;
+    grid-template-areas: "first second" "third fourth";
+    grid-gap: 10px;
+  }
+}
+.commercial__project .project--first {
+  grid-area: first;
+}
+.commercial__project .project--second {
+  grid-area: second;
+}
+.commercial__project .project--third {
+  grid-area: third;
+}
+.commercial__project .project--fourth {
+  grid-area: fourth;
 }
 @media (min-width: 768px) {
   .developer__project {

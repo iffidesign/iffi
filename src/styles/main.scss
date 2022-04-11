@@ -714,7 +714,7 @@
     display: grid;
     grid-template-areas:
       'first second'
-      'third third';
+      'third fourth';
     grid-gap: 10px;
   }
 
@@ -728,6 +728,39 @@
 
   .project--third {
     grid-area: third;
+  }
+
+  .project--fourth {
+    grid-area: fourth;
+  }
+}
+
+// ==============================
+// Commercial
+// ==============================
+.commercial__project {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-areas:
+      'first second'
+      'third fourth';
+    grid-gap: 10px;
+  }
+
+  .project--first {
+    grid-area: first;
+  }
+
+  .project--second {
+    grid-area: second;
+  }
+
+  .project--third {
+    grid-area: third;
+  }
+
+  .project--fourth {
+    grid-area: fourth;
   }
 }
 

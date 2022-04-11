@@ -1,0 +1,25 @@
+extends ../layout/main
+
+block VARIABLES
+  - var pageTitle = 'Retail Aurora Spa & Salon';
+  - var category = 'commercial'
+  - var name = 'aurora-spa-salon';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/commercial-pj-midtown-mobile.jpg")
+      img.img-fluid(src="../../images/commercial-pj-midtown.jpg", alt="")
+    .product__info
+      .product__category Retail
+      .product__title Aurora Spa & Salon
+
+  .divider
+
+  .Album
+    .Album__content
+      .Album__image: img(src="../../images/Retail_Aurora_Spa_Salon/01.jpg")
+      .Album__image: img(src="../../images/Retail_Aurora_Spa_Salon/02.jpg")
+      .Album__image: img(src="../../images/Retail_Aurora_Spa_Salon/03.jpg")
+      .Album__image: img(src="../../images/Retail_Aurora_Spa_Salon/04.jpg")
+  +navigator(category, 1, 3)

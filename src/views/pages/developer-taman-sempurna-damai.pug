@@ -1,0 +1,45 @@
+extends ../layout/main
+
+block VARIABLES
+  -
+    var pageTitle = 'Terrace Taman Sempurna Damai - Semenyih';
+    var category = 'developer'
+    var name = 'taman-sempurna-damai';
+
+block BODY
+  .key-visual
+    picture
+      source(media="(max-width:991px)" srcset="../../images/developer-teega-suites-mobile.jpg")
+      img.img-fluid(src="../../images/developer-teega-suites.jpg", alt="")
+    .product__info
+      .product__category Terrace
+      .product__title Taman Sempurna Damai - Semenyih
+
+  .divider
+
+  .Album
+    .Album__content
+      .Album__image: img(src="../../images/Sempurna_Damai/01.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/02.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/03.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/04.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/05.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/06.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/07.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/08.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/09.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/10.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/11.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/12.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/13.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/14.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/15.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/16.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/17.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/18.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/19.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/20.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/21.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/22.jpg")
+      .Album__image: img(src="../../images/Sempurna_Damai/23.jpg")
+  +navigator(category, 3, 1)

@@ -66,33 +66,32 @@ block BODY
   .section--highlight.highlight: .inner-wrapper
     .container-fluid: .row: .col-10.offset-1
       .highlight__project
-        //- .project.project--first(data-toggle="modal" data-bs-target="#broganiaResidenceModal")
-        .project.project--first(data-toggle="popup", data-target="#broganiaResidencePopup")
+        .project.project--first(data-toggle="popup", data-target="#firstPopup")
           .project__overlay
           picture
-            source(media="(max-width:991px)" srcset="../../images/index-big-mobile.jpg")
-            img.img-fluid(src="../../images/index-big.jpg", alt="")
+            source(media="(max-width:991px)" srcset="../../images/Laman_Villa/cover.jpg")
+            img.img-fluid(src="../../images/Laman_Villa/cover.jpg", alt="")
           .highlight__info
-            .highlight__category Residential
-            .highlight__name Brogania Residence - Semenyih
+            .highlight__category Bungalow
+            .highlight__name Laman Villa - Klang
           .divider
-        .project.project--second(data-toggle="popup" data-target="#minesResortCityPopup")
+        .project.project--second(data-toggle="popup" data-target="#secondPopup")
           .project__overlay
           picture
-            source(media="(max-width:991px)" srcset="../../images/index-small-1-mobile.jpg")
-            img.img-fluid(src="../../images/index-small-1.jpg", alt="")
+            source(media="(max-width:991px)" srcset="../../images/Mines_Resort_City/cover.jpg")
+            img.img-fluid(src="../../images/Mines_Resort_City/cover.jpg", alt="")
           .highlight__info
-            .highlight__category Residential
-            .highlight__name Mines Resort City - Bungalow
+            .highlight__category Bungalow
+            .highlight__name Mines Resort City
           .divider
-        .project.project--third(data-toggle="popup" data-target="#sempurnaDamaiPopup")
+        .project.project--third(data-toggle="popup" data-target="#thirdPopup")
           .project__overlay
           picture
-            source(media="(max-width:991px)" srcset="../../images/index-small-2-mobile.jpg")
-            img.img-fluid(src="../../images/index-small-2.jpg", alt="")
+            source(media="(max-width:991px)" srcset="../../images/Puteri_12_Bandar_Puteri/cover.jpg")
+            img.img-fluid(src="../../images/Puteri_12_Bandar_Puteri/cover.jpg", alt="")
           .highlight__info
-            .highlight__category Residential
-            .highlight__name Sempurna Damai - Semenyih
+            .highlight__category Terrace
+            .highlight__name Puteri 12 - Bandar Puteri Puchong
           .divider
 
   include ../partials/carousel
