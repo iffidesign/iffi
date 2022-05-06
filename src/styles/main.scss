@@ -235,8 +235,12 @@
   &__social-media {
     padding-bottom: 20px;
 
-    a:first-child {
-      padding-right: 20px;
+    a + a {
+      padding-left: 20px;
+    }
+
+    img {
+      height: 20px;
     }
   }
 
@@ -842,8 +846,12 @@
   &__social {
     display: flex;
     justify-content: space-between;
-    max-width: 120px;
+    max-width: 200px;
     margin: 0 auto;
+
+    img {
+      height: 40px;
+    }
   }
 }
 

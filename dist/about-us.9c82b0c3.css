@@ -10250,8 +10250,11 @@ textarea.form-control-lg {
 .footer__social-media {
   padding-bottom: 20px;
 }
-.footer__social-media a:first-child {
-  padding-right: 20px;
+.footer__social-media a + a {
+  padding-left: 20px;
+}
+.footer__social-media img {
+  height: 20px;
 }
 .footer__copy-right {
   font-size: 10px;
@@ -10755,8 +10758,11 @@ textarea.form-control-lg {
 .contact-us__social {
   display: flex;
   justify-content: space-between;
-  max-width: 120px;
+  max-width: 200px;
   margin: 0 auto;
+}
+.contact-us__social img {
+  height: 40px;
 }
 .contact-us__map {
   overflow: hidden;
