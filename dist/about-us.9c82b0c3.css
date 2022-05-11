@@ -10745,7 +10745,7 @@ textarea.form-control-lg {
   .contact-us__contact {
     font-size: 28px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 650px;
     margin: 0 auto;
   }
